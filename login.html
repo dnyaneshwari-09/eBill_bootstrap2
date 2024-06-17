@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin Login page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <style>
+    .card {
+      background-color: #f5f5f5;
+      border: 1px solid #e3e3e3;
+      border-radius: 4px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+      padding: 20px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .card {
+        margin: 50px auto;
+        max-width: 800px;
+    }
+    .card-header {
+        background-color: #2c3e50;
+        color: white;
+    }
+    .btn-primary {
+        background-color: #2c3e50;
+        border-color: #2c3e50;
+    }
+    .btn-primary:hover {
+        background-color: #465a6b;
+        border-color: #465a6b;
+    }
+    .navbar {
+        background-color: #2c3e50 !important;
+    }
+    .navbar .nav-link, .navbar .navbar-brand {
+        color: white !important;
+    }
+    .navbar .nav-link:hover, .navbar .navbar-brand:hover {
+        color: #f8f9fa !important;
+    }
+    .btn-secondary {
+        background-color: #5a6b7d;
+        border-color: #5a6b7d;
+    }
+</style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">eBill</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+              <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                      <a class="nav-link active" href="index.html">Home
+                          <span class="visually-hidden">(current)</span>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="help.html">help?</a>
+                  </li>
+                  
+              </ul>
+              <form class="d-flex">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <a href="login.html"><button type="button" class="btn btn-secondary">Admin Login</button></a>
+                  <a href="signup.html"><button type="button" class="btn btn-secondary">Signup</button></a>
+              </div>
+                  <!-- <input class="form-control me-sm-2" type="search" placeholder="Search">
+                  <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button> -->
+              </form>
+          </div>
+      </div>
+  </nav>
+  </div>
+  <div class="card-container">
+    
+
+    <div class="card ">
+      <form action="/submit_login" method="post">
+        <fieldset>
+          <legend>eBill Admin Login</legend>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
+              </div>
+            </div>
+          </div>
+         <a href="admin_dashboard.html"> <button type="button" class="btn btn-primary btn-lg mt-4">Login</button></a>
+          <!-- <span><a href="/forgot_password.html">Forgot password?</a></span>
+          <span><a href="/signup.html">new registration?</a></span> -->
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <footer class="text-center">&copy; Copyright 2024 eBill</footer>
+
+</body>
+</html>

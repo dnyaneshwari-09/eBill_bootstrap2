@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - eBill</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://bootswatch.com/4/flaty/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <style>
+        body, html {
+            height: 100%;
+        }
+        .card {
+            max-width: 600px;
+            margin: auto;
+            margin-top: 100px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .btn-custom {
+            margin-bottom: 15px;
+        }
+        .img-fluid {
+            margin-top: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">eBill</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="home.html">Home
+                                <span class="visually-hidden">(current)</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="index.html" class="btn btn-secondary ml-auto">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container h-100 d-flex justify-content-center align-items-center">
+        <div class="card text-center">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 mt-5 img">
+                        <img src="light.jpg" class="img-fluid" alt="Placeholder Image">
+                    </div>
+                    <div class="col-md-6 mt-5">
+                        <h3 class="card-title">User Dashboard</h3>
+                        <div class="btn-group-vertical w-100" role="group" aria-label="User Dashboard Button Group">
+                            <a href="payment.html" class="btn btn-primary btn-block btn-custom">Payment</a>
+                            <a href="new_connection.html" class="btn btn-secondary btn-block btn-custom">New Connection</a>
+                            <a href="history.html" class="btn btn-primary btn-block btn-custom">Check History</a>
+                            <a href="complaint.html" class="btn btn-secondary btn-block btn-custom">Feedback/Complaint</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center">&copy; Copyright 2024 eBill</footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

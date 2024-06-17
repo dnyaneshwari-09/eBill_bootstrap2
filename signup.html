@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://bootswatch.com/4/flaty/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <title>eBill Signup</title>
+    <style>
+        body, html {
+            height: 100%;
+        }
+        .card {
+            max-width: 600px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .btn-custom {
+            margin-bottom: 15px;
+        }
+        .img-fluid{
+            margin-top: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">eBill</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home
+                                <span class="visually-hidden">(current)</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a href="login.html"><button type="button" class="btn btn-secondary">Admin Login</button></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-md-8">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <form id="signupForm" action="/submit_login" method="post" onsubmit="return validateForm()">
+                            <fieldset>
+                                <legend class="text-center mb-4">eBill Registration</legend>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="firstName">First name</label>
+                                            <input type="text" class="form-control" id="firstName" placeholder="Enter first name" />
+                                            <div class="invalid-feedback">First name is required.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="lastName">Last name</label>
+                                            <input type="text" class="form-control" id="lastName" placeholder="Enter last name" />
+                                            <div class="invalid-feedback">Last name is required.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="email">Email address</label>
+                                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" />
+                                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                            <div class="invalid-feedback">Valid email is required.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <input type="password" class="form-control" id="password" placeholder="Password" autocomplete="off" />
+                                            <div class="invalid-feedback">Password must be at least 6 characters long.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="country">Country</label>
+                                            <input type="text" class="form-control" id="country" placeholder="Enter country" />
+                                            <div class="invalid-feedback">Country is required.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="state">State</label>
+                                            <input type="text" class="form-control" id="state" placeholder="Enter state" />
+                                            <div class="invalid-feedback">State is required.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="city">City</label>
+                                            <input type="text" class="form-control" id="city" placeholder="Enter city" />
+                                            <div class="invalid-feedback">City is required.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-4">
+                                        <button type="submit" class="btn btn-primary btn-lg btn-block mt-4">Signup</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center">&copy; Copyright 2024 eBill</footer>
+    <script>
+        function validateForm() {
+            const firstName = document.getElementById('firstName');
+            const lastName = document.getElementById('lastName');
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+            const country = document.getElementById('country');
+            const state = document.getElementById('state');
+            const city = document.getElementById('city');
+
+            let isValid = true;
+
+            if (firstName.value.trim() === '') {
+                firstName.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                firstName.classList.remove('is-invalid');
+            }
+
+            if (lastName.value.trim() === '') {
+                lastName.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                lastName.classList.remove('is-invalid');
+            }
+
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email.value.trim())) {
+                email.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                email.classList.remove('is-invalid');
+            }
+
+            if (password.value.length < 6) {
+                password.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                password.classList.remove('is-invalid');
+            }
+
+            if (country.value.trim() === '') {
+                country.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                country.classList.remove('is-invalid');
+            }
+
+            if (state.value.trim() === '') {
+                state.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                state.classList.remove('is-invalid');
+            }
+
+            if (city.value.trim() === '') {
+                city.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                city.classList.remove('is-invalid');
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>
